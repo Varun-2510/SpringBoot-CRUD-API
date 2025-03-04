@@ -76,6 +76,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public List<EmployeeEntity> getDataByPage(Integer pageNumber, Integer pageSize) {
 		
+		System.out.println(pageNumber , pageSize);
+		
 		Pageable page = PageRequest.of(pageNumber, pageSize);
 		
 		Page<EmployeeEntity> pageList = employeeRepo.findAll(page);
